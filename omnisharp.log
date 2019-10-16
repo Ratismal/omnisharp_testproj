@@ -1,0 +1,58 @@
+Starting OmniSharp server at 2019-10-15, 6:01:22 p.m.
+    Target: d:\testproj
+
+OmniSharp server started.
+    Path: C:\Users\cat\.vscode\extensions\ms-vscode.csharp-1.21.4\.omnisharp\1.34.6-beta.20\OmniSharp.exe
+    PID: 19648
+
+[info]: OmniSharp.Stdio.Host
+        Starting OmniSharp on Windows 6.2.9200.0 (x64)
+[info]: OmniSharp.Services.DotNetCliService
+        DotNetPath set to dotnet
+[info]: OmniSharp.MSBuild.Discovery.MSBuildLocator
+        Located 3 MSBuild instance(s)
+            1: Visual Studio Build Tools 2019 16.3.29411.108 - "C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\MSBuild\Current\Bin"
+            2: Visual Studio Community 2019 16.3.29409.12 - "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin"
+            3: StandAlone 16.3 - "C:\Users\cat\.vscode\extensions\ms-vscode.csharp-1.21.4\.omnisharp\1.34.6-beta.20\.msbuild\Current\Bin"
+[info]: OmniSharp.MSBuild.Discovery.MSBuildLocator
+        Registered MSBuild instance: Visual Studio Build Tools 2019 16.3.29411.108 - "C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\MSBuild\Current\Bin"
+[info]: OmniSharp.Cake.CakeProjectSystem
+        Detecting Cake files in 'd:\testproj'.
+[info]: OmniSharp.Cake.CakeProjectSystem
+        Could not find any Cake files
+[info]: OmniSharp.MSBuild.ProjectSystem
+        No solution files found in 'd:\testproj'
+[info]: OmniSharp.MSBuild.ProjectManager
+        Queue project update for 'd:\testproj\testproj.csproj'
+[info]: OmniSharp.Script.ScriptProjectSystem
+        Detecting CSX files in 'd:\testproj'.
+[info]: OmniSharp.Script.ScriptProjectSystem
+        Could not find any CSX files
+[info]: OmniSharp.WorkspaceInitializer
+        Invoking Workspace Options Provider: OmniSharp.Roslyn.CSharp.Services.CSharpFormattingWorkspaceOptionsProvider, Order: 0
+[info]: OmniSharp.MSBuild.ProjectManager
+        Loading project: d:\testproj\testproj.csproj
+[warn]: OmniSharp.MSBuild.ProjectManager
+        Failed to load project file 'd:\testproj\testproj.csproj'.
+d:\testproj\testproj.csproj(1,1)
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Microsoft.Build.Shared.BuildEnvironmentHelper.get_Instance()
+   at Microsoft.Build.Utilities.Traits.get_Instance()
+   at Microsoft.Build.Evaluation.ProjectCollection..ctor(IDictionary`2 globalProperties, IEnumerable`1 loggers, IEnumerable`1 remoteLoggers, ToolsetDefinitionLocations toolsetDefinitionLocations, Int32 maxNodeCount, Boolean onlyLogCriticalEvents, Boolean loadProjectsReadOnly)
+   at Microsoft.Build.Evaluation.ProjectCollection..ctor(IDictionary`2 globalProperties)
+   at OmniSharp.MSBuild.ProjectLoader.EvaluateProjectFileCore(String filePath) in D:\a\1\s\src\OmniSharp.MSBuild\ProjectLoader.cs:line 123
+   at OmniSharp.MSBuild.ProjectLoader.BuildProject(String filePath) in D:\a\1\s\src\OmniSharp.MSBuild\ProjectLoader.cs:line 72
+   at OmniSharp.MSBuild.ProjectFile.ProjectFileInfo.Load(String filePath, ProjectIdInfo projectIdInfo, ProjectLoader loader) in D:\a\1\s\src\OmniSharp.MSBuild\ProjectFile\ProjectFileInfo.cs:line 98
+   at OmniSharp.MSBuild.ProjectManager.<>c__DisplayClass29_0.<LoadProject>b__0() in D:\a\1\s\src\OmniSharp.MSBuild\ProjectManager.cs:line 297
+   at OmniSharp.MSBuild.ProjectManager.LoadOrReloadProject(String projectFilePath, Func`1 loader) in D:\a\1\s\src\OmniSharp.MSBuild\ProjectManager.cs:line 308
+
+[fail]: OmniSharp.MSBuild.ProjectManager
+        Attempted to update project that is not loaded: d:\testproj\testproj.csproj
+[info]: OmniSharp.WorkspaceInitializer
+        Invoking Workspace Options Provider: OmniSharp.Roslyn.CSharp.Services.RenameWorkspaceOptionsProvider, Order: 100
+[info]: OmniSharp.WorkspaceInitializer
+        Invoking Workspace Options Provider: OmniSharp.Roslyn.CSharp.Services.EditorConfigWorkspaceOptionsProvider, Order: 200
+[info]: OmniSharp.WorkspaceInitializer
+        Configuration finished.
+[info]: OmniSharp.Stdio.Host
+        Omnisharp server running using Stdio at location 'd:\testproj' on host 16728.
